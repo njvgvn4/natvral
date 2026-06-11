@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a0a2e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Happy Birthday Miss Natvral</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Particles Background -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Music Control -->
+    <button class="music-toggle" id="musicToggle" aria-label="Toggle music">
+        <svg class="music-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18V5l12-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="18" cy="16" r="3" />
+        </svg>
+        <svg class="pause-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="6" y="4" width="4" height="16" />
+            <rect x="14" y="4" width="4" height="16" />
+        </svg>
+    </button>
+    <audio id="backgroundMusic" loop>
+        <source src="assets\music\Billie Eilish - ocean eyes (Official Music Video) - Billie Eilish.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="section hero-section" id="hero">
+            <div class="hero-content">
+                <p class="hero-subtitle fade-in-up">A celebration of you</p>
+                <h1 class="hero-title fade-in-up delay-1">Happy Birthday<br><span class="highlight">Miss Natvral</span></h1>
+                <p class="hero-description fade-in-up delay-2">Today, the world became a little brighter, a little softer, and infinitely more beautiful — because you arrived.</p>
+                <div class="scroll-indicator fade-in-up delay-3">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M19 12l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-glow"></div>
+        </section>
+
+        <!-- Memory Gallery Section -->
+        <section class="section gallery-section" id="gallery">
+            <div class="section-header">
+                <h2 class="section-title">Our Memories</h2>
+                <p class="section-subtitle">Moments that defined us</p>
+            </div>
+            <div class="gallery-container">
+                <!-- Memory Card 1 -->
+                <div class="memory-card fade-in-section">
+                    <div class="memory-image-wrapper">
+                        <img src="assets\images\First time.jpg" alt="First time I saw you" class="memory-image" loading="lazy">
+                        <div class="memory-overlay"></div>
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-title">First Time I Saw You</h3>
+                        <p class="memory-text">I didn't know it then, but that moment would become the beginning of something I'd never want to end. And then there was the typical you that was about to give me a wrong number😆 just because you didn't really trust me by then but honestly, sijui mbona nilisave 'mamaa'- only later to come and realize that it was you even when I had completely forgot about you😭 I guess that is what people call fate.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Memory Card 2 -->
+                <div class="memory-card fade-in-section">
+                    <div class="memory-image-wrapper">
+                        <img src="assets\images\hands full.jpg" alt="The moment we clicked" class="memory-image" loading="lazy">
+                        <div class="memory-overlay"></div>
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-title">The Moment We Clicked</h3>
+                        <p class="memory-text">This must have to be the most calm interaction I have had so far, needless to say much, meant alot to both of us I believe🫂🤍</p>
+                    </div>
+                </div>
+
+                <!-- Memory Card 3 -->
+                <div class="memory-card fade-in-section">
+                    <div class="memory-image-wrapper">
+                        <img src="assets\images\Becoming.jpg" alt="Who you are becoming" class="memory-image" loading="lazy">
+                        <div class="memory-overlay"></div>
+                    </div>
+                    <div class="memory-content">
+                        <h3 class="memory-title">Who You Are Becoming</h3>
+                        <p class="memory-text">Watching you grow, gradually from who I met has been the most beautiful thing in my life apart from my family, you are just sth else. It has been the most satisfying thing to watch. Hasn't been the easiest considering our last conversation(about hugs just incase you forgot😂) but all the same, I love who you are becoming.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wishes Section -->
+        <section class="section wishes-section" id="wishes">
+            <div class="section-header">
+                <h2 class="section-title">Wishes For You</h2>
+                <p class="section-subtitle">Tap each card to reveal a wish</p>
+            </div>
+            <div class="wishes-container">
+                <!-- Wish Card 1 -->
+                <div class="wish-card fade-in-section" data-revealed="false" tabindex="0" role="button" aria-label="Reveal wish 1">
+                    <div class="wish-front">
+                        <span class="wish-number">01</span>
+                        <p class="wish-prompt">Tap to reveal</p>
+                    </div>
+                    <div class="wish-back">
+                        <p class="wish-text">I wish you all the best in your exams and studies. This is an important beginning in everyone’s life and a key step in shaping the direction you’ll take. I strongly believe in you, girl! 💪📚</p>
+                    </div>
+                </div>
+
+                <!-- Wish Card 2 -->
+                <div class="wish-card fade-in-section" data-revealed="false" tabindex="0" role="button" aria-label="Reveal wish 2">
+                    <div class="wish-front">
+                        <span class="wish-number">02</span>
+                        <p class="wish-prompt">Tap to reveal</p>
+                    </div>
+                    <div class="wish-back">
+                        <p class="wish-text">I wish you a quick ownership of that G-Wagon because I really want to race you someday 🏁😄. We’ll see who wins in that one. Keep the G-Wagon dream in mind though 🚙✨</p>
+                    </div>
+                </div>
+
+                <!-- Wish Card 3 -->
+                <div class="wish-card fade-in-section" data-revealed="false" tabindex="0" role="button" aria-label="Reveal wish 3">
+                    <div class="wish-front">
+                        <span class="wish-number">03</span>
+                        <p class="wish-prompt">Tap to reveal</p>
+                    </div>
+                    <div class="wish-back">
+                        <p class="wish-text">I wish you good health, strength, and peace always 🌿💪. Take care of yourself and keep shining. You’re genuinely beautiful, and I hope life treats you just as gently as you carry yourself ✨🙂.</p>
+                    </div>
+                </div>
+
+                <!-- Wish Card 4 -->
+                <div class="wish-card fade-in-section" data-revealed="false" tabindex="0" role="button" aria-label="Reveal wish 4">
+                    <div class="wish-front">
+                        <span class="wish-number">04</span>
+                        <p class="wish-prompt">Tap to reveal</p>
+                    </div>
+                    <div class="wish-back">
+                        <p class="wish-text">I wish you clarity, growth, and peace in every step you take 🌱✨. May life open doors for you that match your effort and your heart. You’ve got something special about you—don’t ever forget that 💫🙂.</p>
+                    </div>
+                </div>
+
+                <!-- Wish Card 5 -->
+                <div class="wish-card fade-in-section" data-revealed="false" tabindex="0" role="button" aria-label="Reveal wish 5">
+                    <div class="wish-front">
+                        <span class="wish-number">05</span>
+                        <p class="wish-prompt">Tap to reveal</p>
+                    </div>
+                    <div class="wish-back">
+                        <p class="wish-text">I wish you never feel the need to change just to fit someone’s description, because I know we became friends for who we are 🤍. Growth is inevitable, but keep it intentional, Marilynn 😌🌿.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Message Section -->
+        <section class="section message-section" id="message">
+            <div class="section-header">
+                <h2 class="section-title">A Special Message</h2>
+                <p class="section-subtitle">Something just for you😊</p>
+            </div>
+            <div class="message-container fade-in-section">
+                <div class="lock-screen" id="lockScreen">
+                    <div class="lock-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <h3 class="lock-title">A Message Only You Can Open</h3>
+                    <p class="lock-description">Enter the secret code to unlock what's inside</p>
+                    <div class="password-input-wrapper">
+                        <input type="password" id="passwordInput" class="password-input" placeholder="Enter password" maxlength="20" autocomplete="off">
+                        <button class="unlock-btn" id="unlockBtn">
+                            <span>Unlock</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12l5 5L20 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="error-message" id="errorMessage">Incorrect password. Try again.</p>
+                    <p class="hint-text">Hint: what was the password to your whatsApp's locked chats??</p>
+                </div>
+
+                <div class="message-content hidden" id="messageContent">
+                    <div class="message-inner">
+                        <h3 class="message-greeting">My Dearest Natvral,</h3>
+                        <div class="message-body">
+
+                            <p>Happy Birthday, Miss Natural 🎂🌹🤍</p>
+                            <p>Some people enter our lives and simply become part of our story 📖✨. Not because they try to, not because they force their way in, but because their presence feels right 🫶🏽.</p>
+                            <p>You have been one of those people for me 🤍. Through laughter 😭✨, random conversations 📞💭, unforgettable memories 📸, and even the quiet moments 🕊️, you've remained someone I deeply appreciate.</p>
+                            <p>Your kindness 🌷, your determination 📚💪🏽, your sense of humor 😂, and the way you care for the people around you 🫂 are just a few of the many things that make you special 🌟.</p>
+                            <p>As you celebrate another year today 🎉🎈, I hope life rewards you with happiness 😊, growth 🌱, success 🏆, peace 🕊️, and countless beautiful memories ✨. You deserve every good thing that comes your way 🌹🤍.</p>
+                            <p>And before this message comes to an end 😌, there is one thing I want you to remember:</p><p>No matter where life takes us 🛣️🌍, no matter how busy things get ⏳, and no matter how many years pass by 📆✨, you will always have a special place in my life 🤍🫂. You are, and will always be, my best friend 🌹🤝🏽.</p><p>Also... this may be today's gift 🎁😌, but as promised, once you get to 18 of which we can even have a count-down from today😄 But all the writings I have on you, I will give you the opportunity to actually see what has been going on in my life juu, why not🌙🫶🏽.</p><p>Until then, keep smiling 😊🌹, keep shining ✨🤍, and keep being the amazing person you've always been 💫.</p><p class="message-signature">Happy 17th Birthday, Miss Natural 🎂🌹🤍<br>— Jeffrey ✍🏽✨</p>
+
+                        <div class="message-close-wrapper">
+                            <button class="message-close" id="messageClose">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with 🤍 for Miss Natvral</p>
+            <p class="footer-year">2026</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
