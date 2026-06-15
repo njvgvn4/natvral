@@ -565,10 +565,13 @@ body {
     display: flex;
     gap: var(--space-sm);
     margin-bottom: var(--space-sm);
+    width: 100%;
+    align-items: stretch;
 }
 
 .password-input {
     flex: 1;
+    min-width: 0;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid var(--white-20);
     border-radius: var(--radius-sm);
@@ -595,18 +598,20 @@ body {
     background: linear-gradient(135deg, var(--purple-medium) 0%, var(--purple-royal) 100%);
     border: none;
     border-radius: var(--radius-sm);
-    padding: 14px 24px;
+    padding: 14px 12px;
     color: var(--white);
     font-family: inherit;
     font-size: 0.875rem;
     font-weight: 400;
-    letter-spacing: 0.05em;
     cursor: pointer;
-    display: flex;
+
+    display: inline-flex;
     align-items: center;
-    gap: var(--space-xs);
-    transition: all var(--transition-fast);
-    -webkit-tap-highlight-color: transparent;
+    justify-content: center;
+    gap: 4px;
+
+    flex-shrink: 0;
+    white-space: nowrap; /* 🔥 prevents text wrap explosion */
 }
 
 .unlock-btn:active {
@@ -799,6 +804,17 @@ body {
     
     .memory-image-wrapper {
         padding-top: 66.666%; /* 3:2 aspect ratio */
+    }
+}
+
+@media (max-width: 420px) {
+    .password-input-wrapper {
+        flex-direction: column;
+    }
+
+    .unlock-btn {
+        width: 100%;
+        padding: 14px;
     }
 }
 
